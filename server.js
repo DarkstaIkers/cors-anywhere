@@ -21,11 +21,11 @@ var checkRateLimit = require('./lib/rate-limit')(process.env.CORSANYWHERE_RATELI
 
 var cors_proxy = require('./lib/cors-anywhere');
 cors_proxy.createServer({
-  originBlacklist: originBlacklist,
+  originBlacklist: [],
   originWhitelist: [],
   requireHeader: [],
-  checkRateLimit: checkRateLimit,
-  removeHeaders: ['origin', 'referer']
+  checkRateLimit: [],
+  removeHeaders: []
   redirectSameOrigin: true,
   httpProxyOptions: {
     // Do not add X-Forwarded-For, etc. headers, because Heroku already adds it.
