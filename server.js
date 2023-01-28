@@ -26,7 +26,7 @@ cors_proxy.createServer({
   requireHeader: [],
   checkRateLimit: [],
   removeHeaders: []
-  redirectSameOrigin: true,
+  redirectSameOrigin: false,
   httpProxyOptions: {
     // Do not add X-Forwarded-For, etc. headers, because Heroku already adds it.
     xfwd: false,
